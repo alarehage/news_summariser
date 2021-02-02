@@ -48,14 +48,14 @@ __Dataset__
 - Involves 5 categories of news: Sport (511 documents), Business (510 documents), Politics (417 documents), Technology (401 documents), Entertainment (336 documents)
 
 **Summary Length Distribution & News Length Distribution**
-![Length_distribution](/img/summary_news_length_distribution.png "Length distribution")
+![Length_distribution](img/summary_news_length_distribution.PNG "Length distribution")
 
 The length of the summary given in the dataset are mostly below 500 words, while the news article are mostly below 1000 words.
 
 **N-gram**
 N-gram model predicts occurence of word based on the occurence of its N-1 previous words. Some of the words that were grouped together were:
 
-![ngram](img/n-gram1.PNG "ngram1") ![ngram](img/n-gram2.png "ngram2")
+![ngram](img/n-gram1.PNG "ngram1") ![ngram](img/n-gram2.PNG "ngram2")
 
 
 Some of the words that are found together that makes sense are (last,year), (mobile,phone), (new,york), etc.
@@ -63,7 +63,7 @@ Some of the words that are found together that makes sense are (last,year), (mob
 **Word2vec**
 Some exploration has also been done using word embedding with Word2Vec model.
 
-![word2vec](img/word2vec.png "word2vec")
+![word2vec](img/word2vec.PNG "word2vec")
 
 **Data Cleaning** 
 - remove '\n', '\BA', parenthesis, multiple spaces, artifacts (e.g. '\'), various 'xa-' and 'xc2' that has not much meaningful insights
