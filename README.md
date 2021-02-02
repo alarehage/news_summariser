@@ -48,11 +48,13 @@ __Dataset__
 - Involves 5 categories of news: Sport (511 documents), Business (510 documents), Politics (417 documents), Technology (401 documents), Entertainment (336 documents)
 
 **Summary Length Distribution & News Length Distribution**
+
 ![Length_distribution](img/summary_news_length_distribution.PNG "Length distribution")
 
 The length of the summary given in the dataset are mostly below 500 words, while the news article are mostly below 1000 words.
 
-**N-gram**
+**N-grams**
+
 N-gram model predicts occurence of word based on the occurence of its N-1 previous words. Some of the words that were grouped together were:
 
 ![ngram](img/n-gram1.PNG "ngram1") ![ngram](img/n-gram2.PNG "ngram2")
@@ -61,6 +63,7 @@ N-gram model predicts occurence of word based on the occurence of its N-1 previo
 Some of the words that are found together that makes sense are (last,year), (mobile,phone), (new,york), etc.
 
 **Word2vec**
+
 Some exploration has also been done using word embedding with Word2Vec model.
 
 ![word2vec](img/word2vec.PNG "word2vec")
@@ -98,12 +101,9 @@ Some exploration has also been done using word embedding with Word2Vec model.
 All of the 4 models require text data as input and generate summarized text data as output. Preprocessing of the data will be done before being passed through the model.
 
 ### 3b. Model Performance
-Bertscore and ROUGE were used to evaluate model performance. 
-
-For Bertscore, the output summary is evaluated against the original text, using contextual embeddings for the tokens. Cosine similarity is then used to compute the matching, optionally weighted with idf.
-
-For ROUGE, it looks at how many n-grams in the reference summary shows up in the output summary, with 3 variations: Rouge-1 (unigrams), Rouge-2 (bigrams), Rouge-L (longest subsequence)
-
+Bertscore and ROUGE were used to evaluate model performance.
+- For Bertscore, the output summary is evaluated against the original text, using contextual embeddings for the tokens. Cosine similarity is then used to compute the matching, optionally weighted with idf.
+- For ROUGE, it looks at how many n-grams in the reference summary shows up in the output summary, with 3 variations: Rouge-1 (unigrams), Rouge-2 (bigrams), Rouge-L (longest subsequence)
 
 Below are the results for the 4 models:
 
@@ -145,6 +145,7 @@ __Findings__
 Among the 4 models, KL-Sum model was chosen for the web app. The model will be served via a Flask app to generate a summary of any given input text from the user. The app will then be hosted on Heroku.
 
 __Deployment steps__
+
 This uses a free template from [Start Bootstrap](https://startbootstrap.com/themes), Flask Backend, and deploy to Heroku PaaS.
 
 There will be an app.py file created for the app deployment. Within it, the chosen model is called for generating the summary.
