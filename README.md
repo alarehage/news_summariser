@@ -10,7 +10,7 @@ __Folder structure__
 
     ├── img
     ├── notebooks
-    │   ├── A8_EDA_cleaning.ipynb
+    │   ├── EDA_cleaning.ipynb
     │   ├── BertModel.ipynb
     │   ├── eda.ipynb
     │   └── ExtractiveModel.ipynb
